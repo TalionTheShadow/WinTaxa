@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             StartPris = new Label();
-            textBox1 = new TextBox();
+            StartPrisBox = new TextBox();
             Afstand = new Label();
-            textBox2 = new TextBox();
+            AfstandBox = new TextBox();
             Destination = new Label();
-            textBox3 = new TextBox();
+            DestinationBox = new TextBox();
             NatTid = new CheckBox();
             StorVogn = new CheckBox();
             DagTid = new CheckBox();
-            numericUpDown1 = new NumericUpDown();
+            AntalPassagereNumeric = new NumericUpDown();
             AntalPassagere = new Label();
             ForventetPris = new Label();
             BeregnPris = new Button();
             AabenGoogleMaps = new Button();
             label1 = new Label();
-            textBox4 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            VarighedBox = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)AntalPassagereNumeric).BeginInit();
             SuspendLayout();
             // 
             // StartPris
@@ -57,12 +57,12 @@
             StartPris.Text = "StartPris";
             StartPris.Click += label1_Click;
             // 
-            // textBox1
+            // StartPrisBox
             // 
-            textBox1.Location = new Point(86, 18);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            StartPrisBox.Location = new Point(86, 18);
+            StartPrisBox.Name = "StartPrisBox";
+            StartPrisBox.Size = new Size(100, 23);
+            StartPrisBox.TabIndex = 1;
             // 
             // Afstand
             // 
@@ -73,12 +73,12 @@
             Afstand.TabIndex = 2;
             Afstand.Text = "Afstand";
             // 
-            // textBox2
+            // AfstandBox
             // 
-            textBox2.Location = new Point(86, 56);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 3;
+            AfstandBox.Location = new Point(86, 56);
+            AfstandBox.Name = "AfstandBox";
+            AfstandBox.Size = new Size(100, 23);
+            AfstandBox.TabIndex = 3;
             // 
             // Destination
             // 
@@ -90,12 +90,12 @@
             Destination.Text = "Destination";
             Destination.Click += label1_Click_1;
             // 
-            // textBox3
+            // DestinationBox
             // 
-            textBox3.Location = new Point(86, 94);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 5;
+            DestinationBox.Location = new Point(86, 94);
+            DestinationBox.Name = "DestinationBox";
+            DestinationBox.Size = new Size(100, 23);
+            DestinationBox.TabIndex = 5;
             // 
             // NatTid
             // 
@@ -127,12 +127,12 @@
             DagTid.Text = "Dag tid?";
             DagTid.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // AntalPassagereNumeric
             // 
-            numericUpDown1.Location = new Point(109, 301);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 10;
+            AntalPassagereNumeric.Location = new Point(109, 301);
+            AntalPassagereNumeric.Name = "AntalPassagereNumeric";
+            AntalPassagereNumeric.Size = new Size(120, 23);
+            AntalPassagereNumeric.TabIndex = 10;
             // 
             // AntalPassagere
             // 
@@ -181,38 +181,39 @@
             label1.Tag = "Varighed";
             label1.Text = "Varighed";
             // 
-            // textBox4
+            // VarighedBox
             // 
-            textBox4.Location = new Point(304, 21);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 16;
-            textBox4.TextChanged += textBox4_TextChanged;
+            VarighedBox.Location = new Point(304, 21);
+            VarighedBox.Name = "VarighedBox";
+            VarighedBox.Size = new Size(100, 23);
+            VarighedBox.TabIndex = 16;
+            VarighedBox.TextChanged += textBox4_TextChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox4);
+            Controls.Add(VarighedBox);
             Controls.Add(label1);
             Controls.Add(AabenGoogleMaps);
             Controls.Add(BeregnPris);
             Controls.Add(ForventetPris);
             Controls.Add(AntalPassagere);
-            Controls.Add(numericUpDown1);
+            Controls.Add(AntalPassagereNumeric);
             Controls.Add(DagTid);
             Controls.Add(StorVogn);
             Controls.Add(NatTid);
-            Controls.Add(textBox3);
+            Controls.Add(DestinationBox);
             Controls.Add(Destination);
-            Controls.Add(textBox2);
+            Controls.Add(AfstandBox);
             Controls.Add(Afstand);
-            Controls.Add(textBox1);
+            Controls.Add(StartPrisBox);
             Controls.Add(StartPris);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)AntalPassagereNumeric).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -220,20 +221,20 @@
         #endregion
 
         private Label StartPris;
-        private TextBox textBox1;
+        private TextBox StartPrisBox;
         private Label Afstand;
-        private TextBox textBox2;
+        private TextBox AfstandBox;
         private Label Destination;
-        private TextBox textBox3;
+        private TextBox DestinationBox;
         private CheckBox NatTid;
         private CheckBox StorVogn;
         private CheckBox DagTid;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown AntalPassagereNumeric;
         private Label AntalPassagere;
         private Label ForventetPris;
         private Button BeregnPris;
         private Button AabenGoogleMaps;
         private Label label1;
-        private TextBox textBox4;
+        private TextBox VarighedBox;
     }
 }
