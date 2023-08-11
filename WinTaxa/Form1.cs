@@ -60,6 +60,7 @@ namespace WinTaxa
             else
             {
                 MessageBox.Show("Indtast venligst gylidgt input i boksene", "Ugyldigt input", MessageBoxButtons.OK);
+
             }
         }
 
