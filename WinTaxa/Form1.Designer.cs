@@ -154,13 +154,14 @@
             // 
             // BeregnPris
             // 
-            BeregnPris.Location = new Point(109, 344);
+            BeregnPris.Location = new Point(152, 344);
             BeregnPris.Name = "BeregnPris";
             BeregnPris.Size = new Size(77, 23);
             BeregnPris.TabIndex = 13;
             BeregnPris.Tag = "BeregnPris";
             BeregnPris.Text = "Beregn Pris";
             BeregnPris.UseVisualStyleBackColor = true;
+            BeregnPris.Click += BeregnPris_Click;
             // 
             // AabenGoogleMaps
             // 

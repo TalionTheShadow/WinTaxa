@@ -20,9 +20,28 @@ namespace WinTaxa
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BeregnPris_Click(object sender, EventArgs e)
+        {
             double startPris;
             double distancePrisEkstra;
-            double destinationPrisEkstra;
             double prisPerMinut = 5.75;
             double passagerPrisEkstra = 5.75; // Dette tilføjer tillæg til ekstra passager
 
@@ -42,8 +61,8 @@ namespace WinTaxa
 
             var tidvarighed = double.TryParse(VarighedBox.Text, out double varighed);
             var kmafstand = double.TryParse(AfstandBox.Text, out double afstand);
-            string destination  = DestinationBox.Text;
-           
+            string destination = DestinationBox.Text;
+
             if (kmafstand && tidvarighed && !string.IsNullOrEmpty(destination))
             {
                 double totalAfstandPris = afstand * distancePrisEkstra;
@@ -55,28 +74,12 @@ namespace WinTaxa
 
                 double totalPris = startPris + totalAfstandPris + totalDestinationPris + totalVarighedPris + totalPassagerPrisEkstra;
 
-                ForventetPris.Text = "Forventet Pris:" + totalPris.ToString("kr");
+                ForventetPris.Text = "Forventet Pris: " + totalPris.ToString("0.00 kr");
             }
             else
             {
-                MessageBox.Show("Indtast venligst gylidgt input i boksene", "Ugyldigt input", MessageBoxButtons.OK);
-
+                MessageBox.Show("Indtast venligst gyldigt input i boksene", "Ugyldigt input", MessageBoxButtons.OK);
             }
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
