@@ -81,5 +81,19 @@ namespace WinTaxa
                 MessageBox.Show("Indtast venligst gyldigt input i boksene", "Ugyldigt input", MessageBoxButtons.OK);
             }
         }
+        private void AabennGoogleMaps_Click(object sender, EventArgs e)
+        {
+            string destination = DestinationBox.Text;
+
+            if (!string.IsNullOrEmpty(destination))
+            {
+                string googleMapsLink = $"https://www.google.com/maps/place/{Uri.EscapeDataString(destination)}";
+                System.Diagnostics.Process.Start(googleMapsLink);
+            }
+            else
+            {
+                MessageBox.Show("Indtast venligst en destination for at åbne Google Maps", "Manglende destination", MessageBoxButtons.OK);
+            }
+        }
     }
 }
