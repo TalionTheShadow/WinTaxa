@@ -96,6 +96,7 @@
             DestinationBox.Name = "DestinationBox";
             DestinationBox.Size = new Size(100, 23);
             DestinationBox.TabIndex = 5;
+            DestinationBox.Tag = "DestinationBox";
             // 
             // NatTid
             // 
@@ -171,6 +172,7 @@
             AabenGoogleMaps.TabIndex = 14;
             AabenGoogleMaps.Text = "Åben Google Maps";
             AabenGoogleMaps.UseVisualStyleBackColor = true;
+            AabenGoogleMaps.Click += AabenGoogleMaps_Click_1;
             // 
             // label1
             // 

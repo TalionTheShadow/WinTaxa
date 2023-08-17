@@ -58,7 +58,6 @@ namespace WinTaxa
 
             int AntalPassagere = (int)AntalPassagereNumeric.Value;
             startPris += (AntalPassagere - 1) * passagerPrisEkstra;
-
             var tidvarighed = double.TryParse(VarighedBox.Text, out double varighed);
             var kmafstand = double.TryParse(AfstandBox.Text, out double afstand);
             string destination = DestinationBox.Text;
@@ -69,9 +68,7 @@ namespace WinTaxa
                 double totalVarighedPris = varighed * prisPerMinut;
                 double destinationPrisEkstraPerson = 15.0;
                 double totalDestinationPris = destination.Length * destinationPrisEkstraPerson;
-
                 double totalPassagerPrisEkstra = (AntalPassagere - 1) * passagerPrisEkstra;
-
                 double totalPris = startPris + totalAfstandPris + totalDestinationPris + totalVarighedPris + totalPassagerPrisEkstra;
 
                 ForventetPris.Text = "Forventet Pris: " + totalPris.ToString("0.00 kr");
@@ -81,18 +78,22 @@ namespace WinTaxa
                 MessageBox.Show("Indtast venligst gyldigt input i boksene", "Ugyldigt input", MessageBoxButtons.OK);
             }
         }
-        private void AabennGoogleMaps_Click(object sender, EventArgs e)
-        {
-            string destination = DestinationBox.Text;
 
-            if (!string.IsNullOrEmpty(destination))
+        private void AabenGoogleMaps_Click_1(object sender, EventArgs e)
+        {
             {
-                string googleMapsLink = $"https://www.google.com/maps/place/{Uri.EscapeDataString(destination)}";
-                System.Diagnostics.Process.Start(googleMapsLink);
-            }
-            else
-            {
-                MessageBox.Show("Indtast venligst en destination for at åbne Google Maps", "Manglende destination", MessageBoxButtons.OK);
+                string destination = DestinationBox.Text;
+
+
+                if (!string.IsNullOrEmpty(destination))
+                {
+                    string googleMapsLink = $"https://www.google.com/maps/place/{Uri.EscapeDataString(destination)}";
+                    System.Diagnostics.Process.Start(googleMapsLink);
+                }
+                else
+                {
+                    MessageBox.Show("Indtast venligst en destination for at åbne Google Maps", "Manglende destination", MessageBoxButtons.OK);
+                }
             }
         }
     }
