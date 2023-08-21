@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -88,7 +89,7 @@ namespace WinTaxa
                 if (!string.IsNullOrEmpty(destination))
                 {
                     string googleMapsLink = $"https://www.google.com/maps/place/{Uri.EscapeDataString(destination)}";
-                    System.Diagnostics.Process.Start(googleMapsLink);
+                    Process.Start(new ProcessStartInfo(googleMapsLink) { UseShellExecute = true });
                 }
                 else
                 {
